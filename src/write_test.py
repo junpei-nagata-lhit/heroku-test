@@ -6,5 +6,5 @@ outfile = os.path.join(outdir, "test.txt")
 if not os.path.isdir(outdir):
     os.makedirs(outdir, exist_ok=True)
 
-with open(outfile) as f:
+with open(outfile, "w") as f:
     f.write("test...")
