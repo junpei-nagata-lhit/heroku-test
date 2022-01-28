@@ -1,1 +1,1 @@
-write_test: python src/write_test.py
+web: python src/write_test.py
