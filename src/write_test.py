@@ -8,3 +8,6 @@ if not os.path.isdir(outdir):
 
 with open(outfile, "w") as f:
     f.write("test...")
+
+with open(outfile, "r") as f:
+    print(outfile, "contains", f.read())
