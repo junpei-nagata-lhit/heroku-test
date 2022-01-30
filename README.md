@@ -24,15 +24,16 @@ Herokuでは、dynoというコンテナが起動して処理が実行される�
 ## 2. Gitレポジトリにファイルをプッシュ
 Python の場合には以下を配置 (タスクスケジューラ的な簡易な仕様を目的)
 
-* Procfile<br/>
-    起動するdynos(プロセスコンテナ)を列挙<br/>
-    e.g.) worker: python src/write_test.py
-
 * requirements.txt<br/>
     pipでインストールするパッケージ名を列挙<br/>
     e.g.) pydrive
 
 * 実行ファイル
+
+`Procfile`はHeroku Schedulerでは不要<br/>
+dynosを起動したい場合、<br/>
+起動するdynos(プロセスコンテナ)を列挙<br/>
+e.g.) worker: python src/write_test.py
 
 ## 3. Heroku Scheduler の設定
 Heroku Scheduler add on をHerokuのプロジェクトに追加し、<br/>
